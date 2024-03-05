@@ -255,25 +255,18 @@ body {
 .trends-wrp {
   justify-content: center;
   gap: 3px;
-  flex-wrap: wrap;
-}
-
-.wrap-items {
-  gap: 3px;
 }
 
 .trend-item {
   min-height: 319px;
-  width: 100%;
-  max-width: 413px;
+  width: calc((100% - 9px) / 4);
+  flex-grow: 0;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  background-size: cover;
   padding: 18px;
   padding-bottom: 16px;
   position: relative;
-  background-repeat: no-repeat;
 }
 
 .trend-item::after {
@@ -289,18 +282,26 @@ body {
 
 .trend-item-1 {
   background: url(../img/trend1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .trend-item-2 {
   background: url(../img/trend2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .trend-item-3 {
   background: url(../img/trend3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .trend-item-4 {
   background: url(../img/trend4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .trend-content {
@@ -357,12 +358,12 @@ body {
   margin-right: 30px;
 }
 
-.artical-content {
-  max-width: 361px;
-}
-
 .list-item-link {
   margin-right: 20px;
+}
+
+.list-item-link:last-child {
+  margin-right: 0;
 }
 
 .article-title {
@@ -444,6 +445,7 @@ body {
 
 .search-input {
   appearance: none;
+  padding-right: 50px;
 }
 
 .search-btn {
@@ -539,6 +541,8 @@ body {
   font-size: 12px;
   position: relative;
   top: -3px;
+  font-weight: 700;
+  margin-left: 2px; 
 }
 
 /* Products */
@@ -560,28 +564,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.products-item:before {
-  content: '';
-  display: block;
-  max-width: 300px;
-  width: 100%;
-  height: 205px;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.products-item:nth-child(1)::before {
-  background-image: url(../img/shop-item-desk1.jpg);
-}
-
-.products-item:nth-child(2)::before {
-  background-image: url(../img/shop-item-desk2.jpg);
-}
-
-.products-item:nth-child(3)::before {
-  background-image: url(../img/shop-item-desk3.jpg);
 }
 
 .product-content {
@@ -649,9 +631,24 @@ body {
   margin: 0 auto;
 }
 
-.icons-link {
-  height: 20px;
+.dribbble {
+  background-image: url(../svg/001-dribbble.svg);
 }
+.pinterest {
+  background-image: url(../svg/001-pinterest.svg);
+}
+.tumblr {
+  background-image: url(../svg/003-tumblr.svg);
+}
+
+.social-links {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 
 .copyright {
   display: block;
@@ -890,6 +887,7 @@ body {
 
   .trend-item {
     min-height: 247px;
+    width: calc((100% - 3px) / 2);
   }
 
   .title-link {
@@ -920,10 +918,6 @@ body {
   .article-img {
     max-width: 392px;
     margin-bottom: 16px;
-  }
-
-  .artical-content {
-    max-width: 100%;
   }
 
   .article-title {
@@ -963,18 +957,6 @@ body {
     height: 226px;
   }
 
-  .products-item:nth-child(1)::before {
-    background-image: url(../img/shop-item-tablet1.jpg);
-  }
-
-  .products-item:nth-child(2)::before {
-    background-image: url(../img/shop-item-tablet2.jpg);
-  }
-
-  .products-item:nth-child(3)::before {
-    background-image: url(../img/shop-item-tablet3.jpg);
-  }
-
   .product-title {
     font-size: 17px;
   }
@@ -1003,11 +985,14 @@ body {
   .article-img {
     max-width: 100%;
   }
+  .products-wrp {
+    justify-content: center;
+  }
 }
 
 @media (min-width: 640px) and (orientation: landscape) {
-  .trends-wrp {
-    flex-wrap: nowrap;
+  .trend-item {
+    width: calc((100% - 9px) / 4);
   }
 }
 
@@ -1060,11 +1045,6 @@ body {
     padding-top: 45px;
   }
 
-  .wrap-items {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
   .wrp {
     padding-top: 45px;
     flex-wrap: wrap;
@@ -1100,33 +1080,11 @@ body {
 
   /* Products */
   .product-content {
-    min-height: 200px;
     padding-bottom: 25px;
   }
 
   .products {
     padding-bottom: 40px;
-  }
-
-  .products-wrp {
-    justify-content: center;
-  }
-
-  .products-item:before {
-    max-width: 284px;
-    height: 284px;
-  }
-
-  .products-item:nth-child(1)::before {
-    background-image: url(../img/shop-item-mobile1.jpg);
-  }
-
-  .products-item:nth-child(2)::before {
-    background-image: url(../img/shop-item-mobile2.jpg);
-  }
-
-  .products-item:nth-child(3)::before {
-    background-image: url(../img/shop-item-mobile3.jpg);
   }
 
   .copyright {

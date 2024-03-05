@@ -1000,6 +1000,9 @@ body {
   .container {
     padding: 0 16px;
   }
+  .trend-item {
+    width: 100%;
+  }
 
   /* header */
   .header {
